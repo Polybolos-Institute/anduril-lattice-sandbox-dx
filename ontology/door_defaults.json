@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "description": "Suggested Lattice entity field defaults for thin publish doors. Not a C2/ICD map.",
+  "sources": {
+    "mavlink_ownship": {
+      "ontology": {
+        "template": "TEMPLATE_TRACK",
+        "platformType": "UAV"
+      },
+      "milView": {
+        "disposition": "DISPOSITION_FRIENDLY",
+        "environment": "ENVIRONMENT_AIR"
+      },
+      "provenance": {
+        "dataType": "mavlink_telemetry",
+        "integrationName": "polybolos-mavlink-lattice-bridge"
+      },
+      "notes": "Cooperative vehicle telemetry as friendly air track."
+    },
+    "opensky_adsb": {
+      "ontology": {
+        "template": "TEMPLATE_TRACK",
+        "platformType": "ADS-B AIRPLANE"
+      },
+      "milView": {
+        "disposition": "DISPOSITION_UNKNOWN",
+        "environment": "ENVIRONMENT_AIR"
+      },
+      "provenance": {
+        "dataType": "adsb",
+        "integrationName": "polybolos-opensky-lattice-bridge"
+      },
+      "notes": "Public ADS-B; keep disposition unknown unless your product classifies."
+    },
+    "ais_vessel": {
+      "ontology": {
+        "template": "TEMPLATE_TRACK",
+        "platformType": "SURFACE VESSEL"
+      },
+      "milView": {
+        "disposition": "DISPOSITION_UNKNOWN",
+        "environment": "ENVIRONMENT_SURFACE"
+      },
+      "provenance": {
+        "dataType": "ais",
+        "integrationName": "example-ais-door"
+      },
+      "notes": "Align with Anduril AIS sample apps; refine platformType when vessel class known."
+    },
+    "unknown_air": {
+      "ontology": {
+        "template": "TEMPLATE_TRACK",
+        "platformType": "UNKNOWN AIR VEHICLE"
+      },
+      "milView": {
+        "disposition": "DISPOSITION_UNKNOWN",
+        "environment": "ENVIRONMENT_AIR"
+      },
+      "provenance": {
+        "dataType": "unknown",
+        "integrationName": "example"
+      },
+      "notes": "Prefer explicit unknown over inventing UAV/fighter labels."
+    }
+  },
+  "common_platform_types": [
+    "UAV",
+    "ADS-B AIRPLANE",
+    "ADS-B AIRPLANE: FIXED WING",
+    "AIRPLANE",
+    "AIRPLANE: FIXED WING",
+    "AIRPLANE: ROTARY WING",
+    "UNKNOWN AIR VEHICLE",
+    "UNKNOWN VEHICLE",
+    "SURFACE VESSEL",
+    "USV"
+  ]
+}
