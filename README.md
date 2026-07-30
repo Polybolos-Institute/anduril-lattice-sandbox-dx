@@ -54,16 +54,17 @@ python scripts/auth_check.py
 - [anduril-mock-lattice](https://github.com/Polybolos-Institute/anduril-mock-lattice)
 
 
-## Proprietary capabilities
-
-This repository is the open foundation (MIT).
-
-Polybolos Institute maintains additional contested and denied-comms C2 capabilities that are not published here. Contact us to discuss integration under commercial terms.
-
-mark.brown@polybolos.org · https://www.polybolos.org
 
 ## License
 MIT - see [LICENSE](LICENSE).
 
 Anduril® and Lattice® are trademarks of Anduril Industries.
 This is an independent DX sample, not an Anduril product.
+
+## Contact
+
+Polybolos Institute builds integrated C2 systems for contested operations.
+
+For production deployment, integration guidance, and commercial licensing:
+
+mark.brown@polybolos.org · https://www.polybolos.org
